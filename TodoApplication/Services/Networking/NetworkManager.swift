@@ -54,7 +54,6 @@ struct NetworkManager {
             completion(nil, Text.smthWentWrong.localized)
             return
         }
-        print("globalHeaders \(globalHeaders) \(url) \(endPoint.httpMethod)")
         AF.request(url,
                    method: endPoint.httpMethod,
                    parameters: endPoint.options ?? [:],
