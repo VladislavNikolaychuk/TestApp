@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ReviewCell" customModule="TodoApplication" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="446" height="139"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="446" height="139"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jc-ab-xhj">
+                        <rect key="frame" x="0.0" y="0.0" width="446" height="139"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="70X-Gz-Y3J">
+                                <rect key="frame" x="24" y="10" width="164" height="53"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Ome-ZV-act">
+                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="53"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-aB-W4X">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="23"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                <color key="textColor" name="TitleLabel"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTP-qK-sMC">
+                                                <rect key="frame" x="0.0" y="30" width="53.5" height="23"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                <color key="textColor" name="TitleLabel"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="HJ4-j8-avd">
+                                        <rect key="frame" x="56.5" y="0.0" width="107.5" height="53"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdb-kq-CZs">
+                                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="8fT-oa-AOo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                <color key="textColor" name="TitleLabel"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsam" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBY-2G-iuQ">
+                                                <rect key="frame" x="0.0" y="32" width="107.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                <color key="textColor" name="TitleLabel"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXh-9F-xzc">
+                                <rect key="frame" x="24" y="73" width="84.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" name="TitleLabel"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-fd-d7X">
+                                <rect key="frame" x="113.5" y="73" width="42" height="22.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldItalicMT" family="Times New Roman" pointSize="18"/>
+                                <color key="textColor" name="descriptionColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bh-0O-Xxi">
+                                <rect key="frame" x="373" y="105.5" width="49" height="22.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" name="TitleLabel"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="innerСolor"/>
+                        <constraints>
+                            <constraint firstItem="oFy-fd-d7X" firstAttribute="leading" secondItem="dXh-9F-xzc" secondAttribute="trailing" constant="5" id="0YT-aL-r5K"/>
+                            <constraint firstItem="dXh-9F-xzc" firstAttribute="top" secondItem="70X-Gz-Y3J" secondAttribute="bottom" constant="10" id="2ZR-xN-l6w"/>
+                            <constraint firstItem="2Bh-0O-Xxi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2jc-ab-xhj" secondAttribute="leading" constant="24" id="8qr-Sn-tbV"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="70X-Gz-Y3J" secondAttribute="trailing" constant="24" id="BA4-IE-JxI"/>
+                            <constraint firstItem="oFy-fd-d7X" firstAttribute="centerY" secondItem="dXh-9F-xzc" secondAttribute="centerY" id="Osh-JR-Q5i"/>
+                            <constraint firstItem="dXh-9F-xzc" firstAttribute="leading" secondItem="2jc-ab-xhj" secondAttribute="leading" constant="24" id="YPo-2P-A9S"/>
+                            <constraint firstAttribute="trailing" secondItem="2Bh-0O-Xxi" secondAttribute="trailing" constant="24" id="aLW-jY-WLm"/>
+                            <constraint firstItem="2Bh-0O-Xxi" firstAttribute="top" secondItem="oFy-fd-d7X" secondAttribute="bottom" constant="10" id="lX7-Z2-JcR"/>
+                            <constraint firstItem="oFy-fd-d7X" firstAttribute="top" secondItem="dXh-9F-xzc" secondAttribute="top" id="omM-UB-IWg"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oFy-fd-d7X" secondAttribute="trailing" constant="24" id="pTF-91-XBA"/>
+                            <constraint firstItem="70X-Gz-Y3J" firstAttribute="top" secondItem="2jc-ab-xhj" secondAttribute="top" constant="10" id="uJK-bS-neW"/>
+                            <constraint firstItem="70X-Gz-Y3J" firstAttribute="leading" secondItem="2jc-ab-xhj" secondAttribute="leading" constant="24" id="v3K-FL-iOJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2jc-ab-xhj" secondAttribute="trailing" id="Dfh-sO-H8l"/>
+                <constraint firstAttribute="bottom" secondItem="2jc-ab-xhj" secondAttribute="bottom" id="IT5-Og-33g"/>
+                <constraint firstItem="2jc-ab-xhj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VMA-4V-hVd"/>
+                <constraint firstItem="2jc-ab-xhj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zRo-r7-Oek"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="446" height="139"/>
+            <connections>
+                <outlet property="authorName" destination="RBY-2G-iuQ" id="C9H-uJ-c2O"/>
+                <outlet property="comment" destination="oFy-fd-d7X" id="RBw-vf-XO2"/>
+                <outlet property="createdDate" destination="2Bh-0O-Xxi" id="PnS-77-f2D"/>
+                <outlet property="mainView" destination="2jc-ab-xhj" id="RVJ-DK-LIk"/>
+                <outlet property="rate" destination="cdb-kq-CZs" id="sQ6-7S-R88"/>
+            </connections>
+            <point key="canvasLocation" x="424.63768115942031" y="173.77232142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="TitleLabel">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="descriptionColor">
+            <color red="0.50980392159999999" green="0.53725490200000003" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="innerСolor">
+            <color red="0.1215686275" green="0.13725490200000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

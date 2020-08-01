@@ -1,0 +1,42 @@
+//
+//  Localizable.strings
+//  TodoApplication
+//
+//  Created by Vladislav Nikolaychuck on 24.07.2020.
+//  Copyright © 2020 Vladislav Nikolaychuck. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+"TodoApplication" = "TodoApplication";
+"done" = "Done";
+"userName" = "Username";
+"password" = "Password";
+"login" = "Login";
+"signUp" = "Registration";
+"go" = "Go!";
+"toSignUpFlow" = "to Sign Up";
+"userNameInvalid" = "Login is invalid";
+"passwordInvalid" = "Password is invalid";
+"smthWentWrong" = "Something went wrong!";
+"invalidEmail" = "Email is invalid";
+"todos" = "Todos";
+"deadline" = "DEADLINE";
+"todosTitle" = "Todos";
+"delete" = "Delete";
+"edit" = "Edit";
+"editTitle" = "Edit Todo";
+"success" = "Success!";
+"cancel" = "Cancel";
+"logout" = "Logout";
+"saved" = "Saved";
+"products" = "Products";
+"doYouWantMessage" = "Do you want to login?";
+"alertDescription" = "Only logged in you can leave your comment";
+"goToLogin" = "Go to Login";
+"send" = "Send";
+"typeHere" = "Type here";
+"commentSent" = "Comment sent successfully";
+"invalidateCommentField" = "invalidateCommentField";
