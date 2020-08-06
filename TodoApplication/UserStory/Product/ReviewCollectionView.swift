@@ -36,9 +36,25 @@ extension ReviewCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (UIScreen.main.bounds.width - 32.0)
-        let height = (width / 161) * 70
-        return CGSize(width: width, height: height)
+        guard let cell = Bundle.main.loadNibNamed(String(describing: ReviewCell.self),
+            owner: self, options: nil)?.first as? ReviewCell else { return CGSize.zero }
+        let review = reviews[indexPath.row]
+        cell.setReviewData(review: review)
+        return getAutomaticHeight(cell: cell)
+    }
+    
+    func getAutomaticHeight(cell: UICollectionViewCell?) -> CGSize {
+        guard let cell = cell else {
+            return CGSize.zero
+        }
+        cell.setNeedsLayout()
+        cell.layoutIfNeeded()
+        let width = UIScreen.main.bounds.width - 48.0
+        let targetSize = CGSize(width: width, height: 0)
+        let size = cell.contentView.systemLayoutSizeFitting(targetSize,
+                                                            withHorizontalFittingPriority: .required,
+                                                            verticalFittingPriority: .fittingSizeLevel)
+        return size
     }
 }
 
