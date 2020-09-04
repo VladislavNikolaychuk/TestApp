@@ -40,3 +40,4 @@
 "typeHere" = "Type here";
 "commentSent" = "Comment sent successfully";
 "invalidateCommentField" = "invalidateCommentField";
+"signGoogleError" = "The user has not signed in before or they have since signed out.";

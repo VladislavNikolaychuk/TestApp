@@ -49,6 +49,7 @@ enum Text: String, Localizable {
     case typeHere
     case commentSent
     case invalidateCommentField
+    case signGoogleError
     
     var localized: String {
         return NSLocalizedString(self.rawValue, comment: "")

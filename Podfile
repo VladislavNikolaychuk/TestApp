@@ -10,6 +10,7 @@ target 'TodoApplication' do
     pod 'SimpleKeychain', '~> 0.9'
     pod 'Kingfisher'
     pod 'Cosmos', '~> 17.0.0'
+    pod 'GoogleSignIn'
 
   end
 

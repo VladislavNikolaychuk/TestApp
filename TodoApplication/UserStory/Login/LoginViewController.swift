@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 final class LoginViewController: BaseController {
     
+    
     @IBOutlet weak var passwordField: TDField!
+    @IBOutlet weak var buttonStack: UIStackView!
     @IBOutlet weak var loginField: TDField!
     @IBOutlet weak var alert: UILabel!
     var presenter: LoginPresenterProtocol?
@@ -18,7 +21,16 @@ final class LoginViewController: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadLayout()
+        GIDSignIn.sharedInstance()?.delegate = self
+        GIDSignIn.sharedInstance()?.presentingViewController = self
         navigationItem.title = Text.login.localized
+        
+    }
+    
+    func loadLayout() {
+        let googleSignIn = GIDSignInButton()
+        buttonStack.addArrangedSubview(googleSignIn)
     }
     
     @IBAction func showProductsAction(_ sender: Any) {
@@ -58,4 +70,23 @@ extension LoginViewController: LoginViewProtocol {
         passwordField.setToInvalid()
     }
     
+}
+
+extension LoginViewController: GIDSignInDelegate {
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
+              withError error: Error!) {
+        if let error = error {
+            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+                alert.text = Text.signGoogleError.localized
+            } else {
+                alert.text = "\(error.localizedDescription)"
+            }
+            return
+        }
+        guard let idToken = user.authentication.idToken else {
+            return
+        }
+        AppRouter.runMainFlow()
+    }
 }

@@ -56,6 +56,7 @@
 		272F3CCC24CAF2DF00189DDE /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F3CCB24CAF2DF00189DDE /* AuthManager.swift */; };
 		272F3CD024CAF39700189DDE /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 272F3CCF24CAF39700189DDE /* Configurations.plist */; };
 		272F3CD324CAF40700189DDE /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F3CD224CAF40700189DDE /* Configurations.swift */; };
+		27718B38250103E0004284E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27718B37250103E0004284E6 /* GoogleService-Info.plist */; };
 		27A998D724D05D64005E3C8F /* ProductsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A998D624D05D64005E3C8F /* ProductsInteractor.swift */; };
 		27A998D924D05D73005E3C8F /* ProductsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A998D824D05D73005E3C8F /* ProductsPresenter.swift */; };
 		27A998DB24D05D8C005E3C8F /* ProductsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A998DA24D05D8C005E3C8F /* ProductsProtocols.swift */; };
@@ -124,6 +125,7 @@
 		272F3CCF24CAF39700189DDE /* Configurations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		272F3CD224CAF40700189DDE /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		272F3CD524CAF43B00189DDE /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		27718B37250103E0004284E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27A998D624D05D64005E3C8F /* ProductsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsInteractor.swift; sourceTree = "<group>"; };
 		27A998D824D05D73005E3C8F /* ProductsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsPresenter.swift; sourceTree = "<group>"; };
 		27A998DA24D05D8C005E3C8F /* ProductsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsProtocols.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				272F3C9F24CAF0A500189DDE /* Info.plist */,
+				27718B37250103E0004284E6 /* GoogleService-Info.plist */,
 				272F3CCF24CAF39700189DDE /* Configurations.plist */,
 			);
 			path = BundleFiles;
@@ -423,6 +426,7 @@
 				272F3C8B24CAF0A000189DDE /* Frameworks */,
 				272F3C8C24CAF0A000189DDE /* Resources */,
 				2D8353722AD5E23A862842AC /* [CP] Embed Pods Frameworks */,
+				B44B1A0FC2510B0E63C5EAD4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -479,6 +483,7 @@
 				270E2C5424CF0EF70065A400 /* LoginViewController.xib in Resources */,
 				27A998E324D05DCB005E3C8F /* ProductsViewController.xib in Resources */,
 				272F3CD024CAF39700189DDE /* Configurations.plist in Resources */,
+				27718B38250103E0004284E6 /* GoogleService-Info.plist in Resources */,
 				270E2C1424CED17E0065A400 /* SignUpViewController.xib in Resources */,
 				272F3C9B24CAF0A500189DDE /* Assets.xcassets in Resources */,
 			);
@@ -524,6 +529,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodoApplication/Pods-TodoApplication-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B44B1A0FC2510B0E63C5EAD4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodoApplication/Pods-TodoApplication-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodoApplication/Pods-TodoApplication-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodoApplication/Pods-TodoApplication-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

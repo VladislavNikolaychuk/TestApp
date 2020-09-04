@@ -27,6 +27,7 @@ final class AuthManager {
         _ = A0SimpleKeychain().deleteEntry(forKey: AuthKeys.token.rawValue)
     }
     
+    @discardableResult
     func saveCredentials(_ token: String) -> Bool {
         let isTokenSet = A0SimpleKeychain().setString(token,
                                                       forKey: AuthKeys.token.rawValue)
