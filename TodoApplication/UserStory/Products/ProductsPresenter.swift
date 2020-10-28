@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ProductsPresenter: ProductsPresenterProtocol {
     
@@ -26,7 +27,12 @@ class ProductsPresenter: ProductsPresenterProtocol {
     
     func tappedLoginLogoutButton() {
         if UserTypeService.shared.type == .authorized {
-            view?.setToAuthorizedMode()
+            do {
+                try Auth.auth().signOut()
+                view?.setToAuthorizedMode()
+            } catch {
+             print(error)
+            }
         } else if UserTypeService.shared.type == .anonymus {
             view?.setToAnonymusMode()
         }

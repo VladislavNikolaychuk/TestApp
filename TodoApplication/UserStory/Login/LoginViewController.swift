@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleSignIn
+import FirebaseAuth
 
 final class LoginViewController: BaseController {
     
@@ -84,9 +85,17 @@ extension LoginViewController: GIDSignInDelegate {
             }
             return
         }
-        guard let idToken = user.authentication.idToken else {
-            return
-        }
+        
+        guard let idToken = user.authentication.idToken else {return}
+        guard let accessToken = user.authentication.accessToken else {return}
+        let credentials = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
+        Auth.auth().signIn(with: credentials, completion: {(user, error) in
+            if let err = error {
+                self.alert.text = err.localizedDescription
+                return
+            }
+            guard (user?.user.uid) != nil else {return}
+        })
         AppRouter.runMainFlow()
     }
 }

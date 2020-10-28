@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleSignIn
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        GIDSignIn.sharedInstance().clientID = "777259905290-dnhajh2l1ne52t9jsqomdn2tv9dsksdg.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = "796301433716-0v2oddl0h22o59420anokla69atln9oj.apps.googleusercontent.com"
         AppRouter.runOnLoadFlow()
+        FirebaseApp.configure()
+        Auth.auth().addStateDidChangeListener { (auth,user) in
+            if user != nil {
+                AppRouter.runMainFlow()
+            }
+        }
         return true
     }
     

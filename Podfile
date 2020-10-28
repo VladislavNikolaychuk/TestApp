@@ -11,6 +11,10 @@ target 'TodoApplication' do
     pod 'Kingfisher'
     pod 'Cosmos', '~> 17.0.0'
     pod 'GoogleSignIn'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
 
   end
 

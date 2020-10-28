@@ -10,6 +10,7 @@ import UIKit
 import MBProgressHUD
 
 class SignUpViewController: BaseController {
+    @IBOutlet weak var nameField: TDField!
     @IBOutlet weak var alert: UILabel!
     @IBOutlet weak var loginField: TDField!
     @IBOutlet weak var passwordField: TDField!
@@ -23,7 +24,7 @@ class SignUpViewController: BaseController {
     @IBAction func signUpAction(_ sender: Any) {
         showLoader()
         presenter?.signUpWith(userName: loginField.text ?? "",
-                             password: passwordField.text ?? "")
+                              password: passwordField.text ?? "", name: nameField.text ?? "")
     }
     
     @IBAction func editingDidBegin(_ sender: Any) {

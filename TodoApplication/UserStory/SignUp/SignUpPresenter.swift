@@ -13,10 +13,10 @@ class SignUpPresenter: SignUpPresenterProtocol {
     weak var view: SignUpViewProtocol?
     var interactor: SignUpInteractorInputProtocol?
     
-    func signUpWith(userName: String, password: String) {
+    func signUpWith(userName: String, password: String, name: String) {
         let result = validateForm(userName: userName, password: password)
         if result.isValid {
-            interactor?.signUpWith(userName: userName, password: password)
+            interactor?.signUpWith(userName: userName, password: password, name: name)
         } else {
             view?.showAlert(with: result.error ?? Text.smthWentWrong.localized)
         }

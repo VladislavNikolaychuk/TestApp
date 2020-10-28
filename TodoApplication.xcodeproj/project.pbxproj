@@ -56,7 +56,6 @@
 		272F3CCC24CAF2DF00189DDE /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F3CCB24CAF2DF00189DDE /* AuthManager.swift */; };
 		272F3CD024CAF39700189DDE /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 272F3CCF24CAF39700189DDE /* Configurations.plist */; };
 		272F3CD324CAF40700189DDE /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F3CD224CAF40700189DDE /* Configurations.swift */; };
-		27718B38250103E0004284E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27718B37250103E0004284E6 /* GoogleService-Info.plist */; };
 		27A998D724D05D64005E3C8F /* ProductsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A998D624D05D64005E3C8F /* ProductsInteractor.swift */; };
 		27A998D924D05D73005E3C8F /* ProductsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A998D824D05D73005E3C8F /* ProductsPresenter.swift */; };
 		27A998DB24D05D8C005E3C8F /* ProductsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A998DA24D05D8C005E3C8F /* ProductsProtocols.swift */; };
@@ -70,6 +69,7 @@
 		27D824D924D2E84200C6AB61 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D824D724D2E84200C6AB61 /* ReviewCell.swift */; };
 		27D824DA24D2E84200C6AB61 /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D824D824D2E84200C6AB61 /* ReviewCell.xib */; };
 		27D824DC24D2EFCC00C6AB61 /* ReviewCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D824DB24D2EFCC00C6AB61 /* ReviewCollectionView.swift */; };
+		83CD343C25483E2100358328 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83CD343B25483E2100358328 /* GoogleService-Info.plist */; };
 		B80217A86FEF8D9184FBD735 /* Pods_TodoApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4753162B7870643DE95BBDF /* Pods_TodoApplication.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,8 +125,7 @@
 		272F3CCF24CAF39700189DDE /* Configurations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		272F3CD224CAF40700189DDE /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		272F3CD524CAF43B00189DDE /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		27718B37250103E0004284E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		27A998D624D05D64005E3C8F /* ProductsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsInteractor.swift; sourceTree = "<group>"; };
+		27A998D624D05D64005E3C8F /* ProductsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsInteractor.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		27A998D824D05D73005E3C8F /* ProductsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsPresenter.swift; sourceTree = "<group>"; };
 		27A998DA24D05D8C005E3C8F /* ProductsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsProtocols.swift; sourceTree = "<group>"; };
 		27A998DC24D05D9E005E3C8F /* ProductsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRouter.swift; sourceTree = "<group>"; };
@@ -140,6 +139,7 @@
 		27D824D824D2E84200C6AB61 /* ReviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
 		27D824DB24D2EFCC00C6AB61 /* ReviewCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionView.swift; sourceTree = "<group>"; };
 		753F0B5217885189B1921981 /* Pods-TodoApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoApplication.debug.xcconfig"; path = "Target Support Files/Pods-TodoApplication/Pods-TodoApplication.debug.xcconfig"; sourceTree = "<group>"; };
+		83CD343B25483E2100358328 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C28FF29882F6E0F8B5D3EDF /* Pods-TodoApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoApplication.release.xcconfig"; path = "Target Support Files/Pods-TodoApplication/Pods-TodoApplication.release.xcconfig"; sourceTree = "<group>"; };
 		F4753162B7870643DE95BBDF /* Pods_TodoApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -358,7 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				272F3C9F24CAF0A500189DDE /* Info.plist */,
-				27718B37250103E0004284E6 /* GoogleService-Info.plist */,
+				83CD343B25483E2100358328 /* GoogleService-Info.plist */,
 				272F3CCF24CAF39700189DDE /* Configurations.plist */,
 			);
 			path = BundleFiles;
@@ -480,10 +480,10 @@
 				2706716924D1B9A8009C96C8 /* ProductViewController.xib in Resources */,
 				270E2C4024CF06CB0065A400 /* Localizable.strings in Resources */,
 				272F3C9E24CAF0A500189DDE /* LaunchScreen.storyboard in Resources */,
+				83CD343C25483E2100358328 /* GoogleService-Info.plist in Resources */,
 				270E2C5424CF0EF70065A400 /* LoginViewController.xib in Resources */,
 				27A998E324D05DCB005E3C8F /* ProductsViewController.xib in Resources */,
 				272F3CD024CAF39700189DDE /* Configurations.plist in Resources */,
-				27718B38250103E0004284E6 /* GoogleService-Info.plist in Resources */,
 				270E2C1424CED17E0065A400 /* SignUpViewController.xib in Resources */,
 				272F3C9B24CAF0A500189DDE /* Assets.xcassets in Resources */,
 			);

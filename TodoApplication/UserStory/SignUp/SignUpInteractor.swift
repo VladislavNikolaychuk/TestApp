@@ -7,25 +7,23 @@
 //
 
 import Foundation
+import Firebase
 
 class SignUpInteractor: SignUpInteractorInputProtocol {
     
     private let networkManager = NetworkManager()
     weak var presenter: SignUpInteractorOutputProtocol?
     
-    func signUpWith(userName: String, password: String) {
-        let request = AuthEndpoint.signUp(username: userName, password: password)
-        networkManager.fetch(endPoint: request, responseType: AuthResponse.self) { (result, error) in
-            if let authCredentials = result,
-                AuthManager.shared.saveCredentials(authCredentials.token) {
+    func signUpWith(userName: String, password: String, name: String) {
+        Auth.auth().createUser(withEmail: userName, password: password) { (result, error) in
+            if let result = result {
+                let ref = Database.database().reference().child("users")
+                ref.child(result.user.uid).updateChildValues(["name" : name, "email": userName])
                 self.presenter?.signUpProccessSuccess()
             } else {
-                let error = error ?? Text.smthWentWrong.localized
-                self.presenter?.signUpProccessFail(error)
+                self.presenter?.signUpProccessFail(Text.smthWentWrong.localized)
             }
-            
         }
-        
     }
     
 }
